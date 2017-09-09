@@ -1,6 +1,4 @@
 
-# Infinium Robotics - Simulation Documentation
-
 ## System Requirements
 1. **Install ROS and gazebo in the system**
 	I have used Ubuntu 14.04, ROS-indigo and Gazebo 7. Refer to http://wiki.ros.org/ROS/Installation for instructions.
@@ -34,7 +32,7 @@ This loads up the world with the hexrotor at (0.0, -5.0, 0.0) as per the lines:
   <arg name="z" default="0.1"/>
 ```	
 The simulation will begin as seen in the picture below.
-<img src="../img/Pic1.bmp" alt="Pic1" style="width: 500px;"/>
+<img src="../../img/Pic1.bmp" alt="Pic1" style="width: 500px;"/>
 
 The simulation is paused when it launches. When you press play, the UAV flies to the position (-2.5,-2.9,2.5) as per the line:
 ```
@@ -77,7 +75,7 @@ The depth information can be visualized using the node `image_view`:
 ```
  rosrun image_view image_view image:=/camera2/depth/image_raw
 ```
-![Pic2](../img/Pic2.png  "Depth Image")
+![Pic2](../../img/Pic2.png  "Depth Image")
 
 The parameters of the depth camera (`libgazebo_ros_openni_kinect.so` plugin) can be found in the file: `rotors_description/urdf/firefly_camera_2axis_gimbal.xacro`.
 
