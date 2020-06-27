@@ -1,0 +1,147 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun2</uri>
+    </include>
+    <!-- Only require one ROS interface plugin per world, as any other plugin can connect a Gazebo
+    topic to a ROS topic (or vise versa). -->
+    <plugin name="ros_interface_plugin" filename="librotors_gazebo_ros_interface_plugin.so"></plugin>
+
+<!--     <model name="grey_wall">
+      <include>
+        <uri>model://grey_wall</uri>
+        <pose>1 5 0 0 0 0</pose>
+      </include>
+    </model>
+    <model name="marker11">
+      <include>
+        <uri>model://marker11</uri>
+        <pose>-0.15 4.9 1.0 1.57 0 1.57</pose>
+      </include>
+    </model>
+    <model name="marker_infini2">
+      <include>
+        <uri>model://marker_infini2</uri>
+        <pose>2.15 4.9 1.0 1.57 0 1.57</pose>
+      </include>
+    </model>
+    <model name="marker_infini2">
+      <include>
+        <uri>model://marker_infini_logo</uri>
+        <pose>1.2 4.9 0.55 0 0 1.57</pose>
+      </include>
+    </model> -->
+
+<!--     <model name="shelves_high">
+      <include>
+        <uri>model://shelves_high</uri>
+        <pose>0 5 0 0 0 0</pose>
+      </include>
+    </model> -->
+    <model name="shelves_high2">
+      <include>
+        <uri>model://shelves_high2</uri>
+        <pose>0 0 0 0 0 0</pose>
+      </include>
+    </model>
+        <model name="big_box">
+      <include>
+        <uri>model://big_box</uri>
+        <pose>0 0 0 0 0 0</pose>
+      </include>
+    </model>
+        <model name="big_box2">
+      <include>
+        <uri>model://big_box2</uri>
+        <pose>0 0 0 0 0 0</pose>
+      </include>
+    </model>    
+    <model name="big_box3">
+      <include>
+        <uri>model://big_box3</uri>
+        <pose>0 0 0 0 0 0</pose>
+      </include>
+    </model>
+    <model name="big_box4">
+      <include>
+        <uri>model://big_box4</uri>
+        <pose>0 0 0 0 0 0</pose>
+      </include>
+    </model>
+        <model name="big_box4">
+      <include>
+        <uri>model://big_box4</uri>
+        <pose>0 0 0 0 0 0</pose>
+      </include>
+    </model>
+<!--     <model name="Box">
+      <include>
+        <uri>model://Box</uri>
+        <pose>0 5 0 0 0 0</pose>
+      </include>
+    </model> -->
+<!--         <model name="BoxesLargeOnPallet">
+      <include>
+        <uri>model://BoxesLargeOnPallet</uri>
+        <pose>0 5 0 0 0 0</pose>
+      </include>
+    </model>
+        <model name="small_box">
+      <include>
+        <uri>model://small_box</uri>
+        <pose>0 5 0 0 0 0</pose>
+      </include>
+    </model>     -->
+<!--     <model name="BoxesLargeOnPallet_2">
+      <include>
+        <uri>model://BoxesLargeOnPallet_2</uri>
+        <pose>0 5 0 0 0 0</pose>
+      </include>
+    </model>
+ -->
+     <model name="euro_pallet">
+      <include>
+        <uri>model://pallet_full</uri>
+        <pose>0 3 0 0 0 0</pose>
+      </include>
+    </model>
+
+    <model name="pallet_full">
+      <include>
+        <uri>model://pallet_full</uri>
+        <pose>0 3 0 0 0 0</pose>
+      </include>
+    </model>
+    
+
+
+    <physics type='ode'>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>1000</iters>
+          <sor>1.3</sor>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.01</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>100</real_time_update_rate>
+      <gravity>0 0 -9.8</gravity>
+    </physics>
+  
+
+ 
+
+    </world>
+
+</sdf>
